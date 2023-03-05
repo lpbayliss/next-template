@@ -1,0 +1,32 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:storybook/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "prettier"
+  ],
+  "plugins": ["chakra-ui", "testing-library", "unused-imports", "simple-import-sort"],
+  "overrides": [
+    // Only uses Testing Library lint rules in test files
+    {
+      "files": ["**/?(*.)+(spec|test).[jt]s?(x)"],
+      "extends": ["plugin:testing-library/react"]
+    }
+  ],
+  "settings": {
+    "import/resolver": {
+      "typescript": true,
+      "node": true
+    }
+  },
+  "rules": {
+    "chakra-ui/props-order": "error",
+    "chakra-ui/props-shorthand": "error",
+    "chakra-ui/require-specific-component": "error",
+    "unused-imports/no-unused-imports": "error",
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error"
+  }
+}

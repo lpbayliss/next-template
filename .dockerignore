@@ -1,0 +1,9 @@
+.github
+.storybook
+node_modules
+.env
+.env.local
+.gitignore
+.lintstagedrs.js
+renovate.json
+*.md
